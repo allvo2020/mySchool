@@ -1,1 +1,8 @@
-SecFilterEngine Off
+RewriteEngine On
+
+# Redirect /login to login.php
+RewriteRule ^login$ login.php [L]
+
+# Block direct access to login.php
+RewriteCond %{THE_REQUEST} /login\.php [NC]
+RewriteRule ^ - [F]
