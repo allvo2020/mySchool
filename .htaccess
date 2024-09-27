@@ -6,3 +6,11 @@ RewriteRule ^login$ login.php [L]
 # Block direct access to login.php
 RewriteCond %{THE_REQUEST} /login\.php [NC]
 RewriteRule ^ - [F]
+
+
+# Redirect /dashboard to dashboard.php
+RewriteRule ^dashboard$ dashboard.php [L]
+
+# Block direct access to dashboard.php
+RewriteCond %{THE_REQUEST} /dashboard\.php [NC]
+RewriteRule ^ - [F]
